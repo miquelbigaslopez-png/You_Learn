@@ -1,0 +1,521 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#333;
+}
+
+/* ===========================
+   MENÚ
+=========================== */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    transition:.35s;
+}
+
+header.scrolled{
+    background:white;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+}
+
+.navbar{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 0;
+
+}
+
+.logo{
+
+    font-size:28px;
+    font-weight:700;
+    color:#1565ff;
+
+}
+
+.menu{
+
+    list-style:none;
+    display:flex;
+    gap:35px;
+
+}
+
+.menu li{
+
+    position:relative;
+
+}
+
+.menu a{
+
+    text-decoration:none;
+    color:#222;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    color:#1565ff;
+
+}
+
+/* ===========================
+   SUBMENÚ
+=========================== */
+
+.submenu{
+
+    position:absolute;
+
+    top:35px;
+    left:0;
+
+    background:white;
+
+    list-style:none;
+
+    width:210px;
+
+    border-radius:10px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.3s;
+
+    overflow:hidden;
+
+}
+
+.submenu li{
+
+    border-bottom:1px solid #eee;
+
+}
+
+.submenu li:last-child{
+
+    border:none;
+
+}
+
+.submenu a{
+
+    display:block;
+    padding:14px 18px;
+
+}
+
+.dropdown:hover .submenu{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+
+    url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+.hero h1{
+
+    font-size:62px;
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+    max-width:700px;
+    margin:auto;
+
+}
+
+.buttons{
+
+    margin-top:45px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:16px 34px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    margin:10px;
+
+    transition:.3s;
+
+}
+
+.blau{
+
+    background:#1565ff;
+    color:white;
+
+}
+
+.blanc{
+
+    background:white;
+    color:#1565ff;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ===========================
+   SECCIONS
+=========================== */
+
+section{
+
+    padding:90px 10%;
+
+}
+
+section h2{
+
+    text-align:center;
+    font-size:40px;
+    margin-bottom:60px;
+
+}
+
+/* ===========================
+   TARGETES
+=========================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(240px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    font-size:50px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.card h3{
+
+    margin:20px 0;
+
+    font-size:22px;
+
+}
+
+.card p{
+
+    font-size:16px;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+/* ===========================
+   TRASTERS
+=========================== */
+
+.size{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.size:hover{
+
+    transform:scale(1.05);
+
+}
+
+.size h3{
+
+    font-size:38px;
+    color:#1565ff;
+
+}
+
+.size span{
+
+    display:block;
+
+    margin-top:25px;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#17a54b;
+
+}
+
+/* ===========================
+   FAQ
+=========================== */
+
+details{
+
+    background:white;
+
+    padding:20px;
+
+    margin:18px auto;
+
+    max-width:900px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+summary{
+
+    cursor:pointer;
+    font-size:20px;
+    font-weight:600;
+
+}
+
+details p{
+
+    margin-top:15px;
+    line-height:1.6;
+
+}
+
+/* ===========================
+   CONTACTE
+=========================== */
+
+form{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+input,
+textarea{
+
+    padding:18px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+    font-size:16px;
+
+}
+
+textarea{
+
+    resize:none;
+    height:170px;
+
+}
+
+button{
+
+    background:#1565ff;
+
+    color:white;
+
+    border:none;
+
+    padding:18px;
+
+    font-size:18px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#0f4bd4;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.menu{
+
+    gap:18px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.navbar{
+
+    flex-direction:column;
+    gap:20px;
+
+}
+
+.menu{
+
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+section h2{
+
+    font-size:30px;
+
+}
+
+}
