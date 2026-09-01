@@ -16,7 +16,7 @@ window.addEventListener("scroll", () => {
 
 
 // ===============================
-// ANIMACIÓ DE LES TARGETES
+// ANIMACIÓ DE LES TARGETES AL FER SCROLL
 // ===============================
 
 const cards = document.querySelectorAll(".card, .size, details");
@@ -59,23 +59,3 @@ buttons.forEach(btn => {
     });
 
 });
-/* ===========================
-   ANIMACIONS
-=========================== */
-
-.card,
-.size,
-details{
-
-    opacity:0;
-    transform:translateY(50px);
-    transition:.8s;
-
-}
-
-.show{
-
-    opacity:1;
-    transform:translateY(0);
-
-}

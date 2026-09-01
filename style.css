@@ -88,6 +88,61 @@ header.scrolled{
 
 }
 
+/* Estil per al nom "You Learn" en vermell i cursiva */
+.highlight-brand {
+    color: #e63946;       /* Color vermell */
+    font-style: italic;   /* Text en cursiva */
+    font-weight: 700;     /* Negreta (opcional) */
+}
+
+/* Configuració del HERO per distribuir els elements verticalment */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Centra tot el grup verticalment a la pantalla */
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;         /* Espai per no trepitjar la barra de navegació fix */
+    
+    background-color: #0b132b;
+    background-image: linear-gradient(to bottom, rgba(11, 19, 43, 0.4), rgba(11, 19, 43, 0.95));
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estil per a "You Learn" gran i centrat entre el menú i el títol */
+/* 2. Ajustem "You Learn" */
+.brand-hero {
+    font-size: 72px;
+    font-weight: 700;
+    color: #e63946;
+    font-style: italic;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+    
+    margin-top: 0;             /* Eliminem els marges automàtics anteriors */
+    margin-bottom: 25px;       /* Controla la distància (aprox. 2 línies) fins al títol inferior */
+    transform: none;           /* Eliminem el desplaçament anterior */
+}
+}
+
+/* 3. Ajustem el bloc de text i botons */
+.hero-text {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;          /* Treiem el marge inferior automàtic */
+}
+
+/* Responsivitat per a pantalles petites/mòbils */
+@media (max-width: 700px) {
+    .brand-hero {
+        font-size: 48px;        /* Adaptació de mida per a mòbil */
+    }
+}
+
 /* ===========================
    SUBMENÚ
 =========================== */
@@ -145,7 +200,7 @@ header.scrolled{
 }
 
 /* ===========================
-   HERO
+   HERO (FONS LONDON SKYLINE)
 =========================== */
 
 .hero{
@@ -160,15 +215,15 @@ header.scrolled{
 
     color:white;
 
-    background:
+    /* Capa fosca per fons i la imatge de l'skyline de Londres */
+    background: 
+        linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
+        url("fons_skyline.png");
 
-    linear-gradient(rgba(0,0,0,.55),
-    rgba(0,0,0,.55)),
-
-    url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80");
-
-    background-size:cover;
-    background-position:center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-color: #0f172a;
 
 }
 
@@ -303,7 +358,7 @@ section h2{
 }
 
 /* ===========================
-   TRASTERS
+   CURSOS
 =========================== */
 
 .size{
@@ -465,6 +520,27 @@ footer{
 }
 
 /* ===========================
+   ANIMACIONS SCROLL
+=========================== */
+
+.card,
+.size,
+details{
+
+    opacity:0;
+    transform:translateY(50px);
+    transition:.8s;
+
+}
+
+.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+/* ===========================
    RESPONSIVE
 =========================== */
 
@@ -502,20 +578,4 @@ footer{
 .menu{
 
     flex-wrap:wrap;
-    justify-content:center;
-
-}
-
-.hero h1{
-
-    font-size:34px;
-
-}
-
-section h2{
-
-    font-size:30px;
-
-}
-
-}
+    justify-
